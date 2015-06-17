@@ -2,16 +2,9 @@
  * Ruby module to block device operations on Linux platforms.
  */
 
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <sys/ioctl.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdio.h>
 #include <errno.h>
-#include <string.h>
 #include <linux/fs.h>
-#include <malloc.h>
 
 #include "ruby.h"
 
