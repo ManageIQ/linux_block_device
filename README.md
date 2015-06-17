@@ -1,8 +1,10 @@
 # LinuxBlockDevice
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/linux_block_device`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby module to interact with block devices on Linux platforms.
 
-TODO: Delete this and the text above, and describe your gem
+[![Gem Version](https://badge.fury.io/rb/linux_block_device.svg)](http://badge.fury.io/rb/linux_block_device)
+[![Build Status](https://travis-ci.org/ManageIQ/linux_block_device.svg)](https://travis-ci.org/ManageIQ/linux_block_device)
+[![Dependency Status](https://gemnasium.com/ManageIQ/linux_block_device.svg)](https://gemnasium.com/ManageIQ/linux_block_device)
 
 ## Installation
 
@@ -22,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+LinuxBlockDevice supports `.size` to get the size of a block device via [ioctl](http://linux.die.net/man/2/ioctl) with request=BLKGETSIZE64.
 
 ## Development
 
@@ -32,8 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/linux_block_device.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/ManageIQ/linux_block_device.
 
 ## License
 

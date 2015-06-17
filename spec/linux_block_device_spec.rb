@@ -5,7 +5,7 @@ describe LinuxBlockDevice do
     expect(LinuxBlockDevice::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it '.size' do
+    expect(LinuxBlockDevice).to respond_to(:size)
   end
 end
