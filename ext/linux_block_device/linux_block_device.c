@@ -2,9 +2,12 @@
  * Ruby module to block device operations on Linux platforms.
  */
 
-#include <sys/ioctl.h>
 #include <errno.h>
+
+#ifdef __linux__
+#include <sys/ioctl.h>
 #include <linux/fs.h>
+#endif
 
 #include "ruby.h"
 
@@ -12,11 +15,12 @@ static const char *module_name = "LinuxBlockDevice";
 
 static VALUE
 lbd_size(VALUE self, VALUE rfd)	{
+#ifdef __linux__
 	int	fd;
 	int64_t sz;
-	
+
 	fd = NUM2INT(rfd);
-	
+
 	if (ioctl(fd, BLKGETSIZE64, &sz) < 0)   {
 		rb_raise(rb_eSystemCallError,
 			"%s.size - ioctl failed on file descriptor: %d, %s\n",
@@ -26,6 +30,9 @@ lbd_size(VALUE self, VALUE rfd)	{
 		);
 	}
 	return OFFT2NUM(sz);
+#else
+	rb_raise(rb_eNotImpError, "Not supported on this platform.\n");
+#endif
 }
 
 VALUE	mLinuxBlockDevice;
