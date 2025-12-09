@@ -4,8 +4,6 @@ Ruby module to interact with block devices on Linux platforms.
 
 [![Gem Version](https://badge.fury.io/rb/linux_block_device.svg)](http://badge.fury.io/rb/linux_block_device)
 [![CI](https://github.com/ManageIQ/linux_block_device/actions/workflows/ci.yaml/badge.svg)](https://github.com/ManageIQ/linux_block_device/actions/workflows/ci.yaml)
-[![Code Climate](https://codeclimate.com/github/ManageIQ/linux_block_device.svg)](https://codeclimate.com/github/ManageIQ/linux_block_device)
-[![Test Coverage](https://codeclimate.com/github/ManageIQ/linux_block_device/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/linux_block_device/coverage)
 
 ## Installation
 
